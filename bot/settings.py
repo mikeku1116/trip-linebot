@@ -120,3 +120,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+LINE_CHANNEL_ACCESS_TOKEN = 'Messaging API的Channel access token'
+LINE_CHANNEL_SECRET = 'Basic settings的Channel Secret'
