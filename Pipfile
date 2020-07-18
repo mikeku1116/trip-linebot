@@ -10,6 +10,7 @@ autopep8 = "*"
 django = "*"
 pylint = "*"
 line-bot-sdk = "*"
+psycopg2 = "*"
 
 [requires]
 python_version = "3.8"
