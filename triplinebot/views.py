@@ -29,12 +29,12 @@ def callback(request):
         for event in events:
             if isinstance(event, MessageEvent):  # 如果有訊息事件
 
-                # triplinebot_location資料表中，篩選使用者發送地區的景點
+                # 篩選location資料表中，地區欄位為使用者發送地區的景點資料
                 locations = Location.objects.filter(area=event.message.text)
 
                 content = ''  # 回覆使用者的內容
                 for location in locations:
-                    content = location.name + '\n' + location.address + '\n\n'
+                    content += location.name + '\n' + location.address + '\n\n'
 
                 line_bot_api.reply_message(  # 回覆訊息
                     event.reply_token,
